@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Sênior - Acessibilidade</title>
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Cores de alto contraste e fontes grandes por padrão */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px; /* Fonte maior para facilitar a leitura */
+      line-height: 1.6;
+      color: #111111; /* Texto quase preto para contraste máximo */
+      background-color: #F9F9F9;
+    }
+
+    /* Ocultar elementos visualmente, mas manter para leitores de tela */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: #004D40; /* Verde escuro */
+      color: #FFFFFF;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    /* Navegação com alvos de toque grandes */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: #FFFFFF;
+      background-color: #00796B;
+      text-decoration: none;
+      padding: 14px 24px; /* Área de clique grande */
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      border: 2px solid #FFFFFF;
+    }
+
+    /* Foco visível e claro para navegação por teclado */
+    nav a:focus,
+    button:focus,
+    a:focus {
+      outline: 4px solid #FFD54F; /* Amarelo de alto contraste */
+      outline-offset: 3px;
+    }
+
+    nav a:hover {
+      background-color: #004D40;
+    }
+
+    /* Conteúdo Principal */
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background-color: #FFFFFF;
+      border: 2px solid #E0E0E0;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #004D40;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    /* Botão de Ação Destacado */
+    .btn-principal {
+      display: inline-block;
+      background-color: #1565C0; /* Azul forte */
+      color: #FFFFFF;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .btn-principal:hover {
+      background-color: #0D47A1;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #212121;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header role="banner">
+    <h1>Portal Sênior</h1>
+    <p>Informações claras e simples para o seu dia a dia</p>
+    
+    <nav role="navigation" aria-label="Menu Principal">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#noticias">Notícias</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main">
+    <section id="inicio">
+      <h2>Bem-vindo ao Nosso Portal</h2>
+      <p>Este site foi projetado com textos grandes, cores de alto contraste e navegação simples para garantir uma leitura confortável e sem complicações.</p>
+    </section>
+
+    <section id="noticias">
+      <h2>Dica de Saúde</h2>
+      <p>Caminhar 30 minutos por dia ajuda a manter o corpo e a mente saudáveis. Lembre-se de beber água regularmente durante os seus passeios.</p>
+      
+      <button type="button" class="btn-principal" onclick="alert('Obrigado pelo interesse! Em breve mais informações.')">
+        Ler mais dicas de saúde
+      </button>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2026 Portal Sênior. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

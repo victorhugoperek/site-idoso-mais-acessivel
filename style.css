@@ -1,0 +1,135 @@
+/* ==========================================================================
+   ESTILOS DEDICADOS Á ACESSIBILIDADE PARA IDOSOS
+   ========================================================================== */
+
+/* 1. CONFIGURAÇÕES GERAIS DE TIPOGRAFIA E BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px; /* Tamanho base maior para leitura confortável */
+  line-height: 1.6; /* Espaçamento entre linhas amplo */
+  color: #111111; /* Contraste máximo contra o fundo claro */
+  background-color: #F9F9F9;
+}
+
+/* Esconde elementos visualmente sem tirar do leitor de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* 2. CABEÇALHO E NAVEGAÇÃO */
+header {
+  background-color: #004D40; /* Verde escuro institucional */
+  color: #FFFFFF;
+  padding: 24px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Links em formato de botão grande (fácil de clicar com mouse ou toque) */
+nav a {
+  color: #FFFFFF;
+  background-color: #00796B;
+  text-decoration: none;
+  padding: 16px 28px; /* Área de toque expandida */
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  border: 2px solid #FFFFFF;
+  min-width: 120px;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #004D40;
+}
+
+/* Indicador de foco bem visível para navegação via teclado (Tab) */
+nav a:focus,
+button:focus,
+a:focus {
+  outline: 4px solid #FFD54F; /* Amarelo brilhante */
+  outline-offset: 4px;
+}
+
+/* 3. CONTEÚDO PRINCIPAL E SEÇÕES */
+main {
+  max-width: 800px; /* Largura limitada para não esticar demais a linha */
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: #FFFFFF;
+  border: 2px solid #D0D0D0;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #004D40;
+  margin-bottom: 16px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* 4. BOTÕES DE AÇÃO DESTACADOS */
+.btn-principal {
+  display: inline-block;
+  background-color: #1565C0; /* Azul de alto contraste */
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 18px 36px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-principal:hover {
+  background-color: #0D47A1;
+}
+
+/* 5. RODAPÉ */
+footer {
+  background-color: #212121;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 24px 20px;
+  margin-top: 40px;
+  font-size: 1rem;
+}
